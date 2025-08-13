@@ -31,8 +31,8 @@ namespace SciADV_ReLauncher
             if (File.Exists(LocaleEmulatorToolPath) == false)
             {
                 MessageBox.Show("Locale Emulator is missing!\nPlease let the Launcher Download and configure it!");
-                FormMainConfig formMainConfig = new FormMainConfig();
-                formMainConfig.ShowDialog();
+                FormToolDownloader ToolDownloader = new FormToolDownloader();
+                ToolDownloader.ShowDialog();
             }
         }
 
@@ -174,6 +174,12 @@ namespace SciADV_ReLauncher
 
             //If Release Mode
             EasterEgg();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            FormMainConfig mainConfig = new FormMainConfig();
+            mainConfig.ShowDialog();
         }
     }
 }

@@ -54,6 +54,7 @@ namespace SciADV_ReLauncher
             label7 = new Label();
             label8 = new Label();
             button15 = new Button();
+            button16 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -223,7 +224,7 @@ namespace SciADV_ReLauncher
             // 
             // label1
             // 
-            label1.Location = new Point(372, 415);
+            label1.Location = new Point(369, 415);
             label1.Name = "label1";
             label1.Size = new Size(313, 48);
             label1.TabIndex = 15;
@@ -306,11 +307,23 @@ namespace SciADV_ReLauncher
             button15.UseVisualStyleBackColor = true;
             button15.Click += button15_Click;
             // 
+            // button16
+            // 
+            button16.BackgroundImage = Properties.Resources.ConfigIcon1;
+            button16.BackgroundImageLayout = ImageLayout.Zoom;
+            button16.Location = new Point(688, 418);
+            button16.Name = "button16";
+            button16.Size = new Size(55, 45);
+            button16.TabIndex = 24;
+            button16.UseVisualStyleBackColor = true;
+            button16.Click += button16_Click;
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1091, 470);
+            Controls.Add(button16);
             Controls.Add(button15);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -370,5 +383,6 @@ namespace SciADV_ReLauncher
         private Label label7;
         private Label label8;
         private Button button15;
+        private Button button16;
     }
 }

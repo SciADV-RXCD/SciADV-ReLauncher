@@ -18,44 +18,49 @@ namespace SciADV_ReLauncher.Forms
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //Download a file using WebClient
-            using (WebClient wc_locale = new WebClient())
-            {
-                wc_locale.DownloadProgressChanged += wc_locale_DownloadProgressChangedLocaleEmulator;
-                wc_locale.DownloadFileAsync(
-                    // Param1 = Link of file
-                    new System.Uri("https://github.com/SciADV-RXCD/SciADV-Launcher/releases/download/0.0.0/LocaleEmulator.zip"),
-                    // Param2 = Path to save
-                    AppContext.BaseDirectory + "LocaleEmulator.zip"
-                );
-                wc_locale.DownloadFileCompleted += (s, ev) =>
-                {
-                    if (ev.Error != null)
-                    {
-                        MessageBox.Show("Error downloading file: " + ev.Error.Message);
-                    }
-                    else
-                    {
-                        // Optionally, you can extract the downloaded zip file here
-                        System.IO.Compression.ZipFile.ExtractToDirectory(AppContext.BaseDirectory + "LocaleEmulator.zip", AppContext.BaseDirectory + "Tools\\LocaleEmulator");
-                        System.IO.File.Delete(AppContext.BaseDirectory + "LocaleEmulator.zip"); // Delete the zip file after extraction
-                        label1.Visible = true;
-                        button2.Enabled = false;
-                    }
-                };
-            }
-        }
-        // Event to track the progress
-        void wc_locale_DownloadProgressChangedLocaleEmulator(object sender, DownloadProgressChangedEventArgs e)
-        {
-            progressBar2.Value = e.ProgressPercentage;
-        }
-
         private void FormMainConfig_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //CHAOS;HEAD NOAH
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //STEINS;GATE
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //ROBOTICS;NOTES ELITE
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //CHAOS;CHILD
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //STEINS;GATE 0
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //ROBOTICS;NOTES DaSH
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            //OCCULTIC;NINE
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            //ANONYMOUS;CODE
         }
     }
 }
