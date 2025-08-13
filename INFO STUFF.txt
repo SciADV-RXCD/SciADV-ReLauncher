@@ -1,0 +1,22 @@
+- Make Seperate VideoEpisodeSelectorForms for every Anime and Drama CD Entry and Manga Entry
+- (MAYBE???) Make buttons for all main entries and seperately for side entries of the same main entry (not all but for example: "STEINS;GATE" & "STEINS;GATE Side Entries")
+
+Open the Video Episode Selector Form with the following code and select a Episode:
+/*
+            // Open the Video Episode Selector Form, Change Size Accourdingly
+            FormVideoEpisodeSelector EpisodeSelector = new FormVideoEpisodeSelector();
+            // Full Size, 6 Episodes
+            // EpisodeSelector.Size = new Size(348, 216);
+            // Smaller Size, 4 Episodes
+            EpisodeSelector.Size = new Size(348, 156);
+            EpisodeSelector.Show();
+*/
+
+Open the Video Player Form with the selected Episode:
+/*
+            //Close the current form and open the video player with a specific video file path
+            this.Close();
+            FormVideoPlayer VideoPlayer = new FormVideoPlayer();
+            FormVideoPlayer.VideoFilepathFinal = @"D:\Anime - TMP\9-nine-\[Valhalla-Society] 9-nine- Ruler's Crown S01E01 1080p AMZN WEB-DL DDP2.0 H.264.mkv";
+            VideoPlayer.ShowDialog();
+*/
