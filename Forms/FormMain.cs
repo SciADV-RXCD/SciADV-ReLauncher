@@ -53,10 +53,11 @@ namespace SciADV_ReLauncher
 
                 int randomQuotes = rndQuotes.Next(quotes.Length);
 
-                this.Text = "SciADV ReLauncher - DEBUG MODE - " + quotes[randomQuotes];
+                this.Text = "[D] SciADV ReLauncher - " + quotes[randomQuotes];
 
                 this.Refresh();
                 Console.WriteLine("F I S H");
+                Console.Title = "[DEBUG] SciADV ReLauncher";
             }
         }
 

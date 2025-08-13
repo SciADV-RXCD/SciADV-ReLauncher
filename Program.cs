@@ -62,8 +62,6 @@ namespace SciADV_ReLauncher
             [ConditionalAttribute("DEBUG")]
             static void DebugModeEnabler()
             {
-                MessageBox.Show("Debug mode enabled.", "Debug Mode", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 EnsureConsole();
 
                 if (_keepConsoleOpen)
