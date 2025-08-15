@@ -18,3 +18,15 @@
 (S;G) Silence, you unfaithful bastard! Your 2D wives are crying.
 (S;G) But... he's a guy...
 (S;G) Okabe: "Leave this task to Hououin Kyouma! I shall open this door with precision, boldness and delicacy, as if it were the flesh of a beautiful woman!"
+(S;G) Okabe: "Everything is Steins;Gate's choice. El Psy Congroo."
+(S;G) Daru: "Yea, I know what you mean. Okarin just isn't Okarin unless he's laughing like an idiot."
+(S;GVSO) Manipulating elementary schoolgirls is like taking candy from a baby!
+(R;NE) Frau: "Apologize! Y-You need to apologize to the 120 million lolicons nationwide!"
+(R;NE) Listen up. Boing refers to a woman's breasts. This'll be on the exam.
+(R;NE) Wait, we still have to pay?! That's not rock and roll at all!
+(R;NE) Subaru-kun, were you imagining the girls in skin-tight suits?#
+(C;C) Serika: "Okkei!"
+(S;G0) Daru: "Whoops, got too serious. Need to slip back into shitpost mode."
+(A;C) It was like God was doing a little trolling.
+(A;C) Pollon: "Women and their enigmatic minds! The best hacker in the world couldn't crack their brains!"
+(A;C) Hack into God.
