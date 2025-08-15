@@ -1,6 +1,6 @@
 ﻿namespace SciADV_ReLauncher.Forms
 {
-    partial class FormVideoEpisodeSelector
+    partial class OcculticNineEpisodeSelector
     {
         /// <summary>
         /// Required designer variable.
@@ -62,6 +62,7 @@
             button2.TabIndex = 1;
             button2.Text = "Episode 02";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -72,6 +73,7 @@
             button3.TabIndex = 2;
             button3.Text = "Episode 03";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -82,6 +84,7 @@
             button4.TabIndex = 3;
             button4.Text = "Episode 04";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -92,6 +95,7 @@
             button5.TabIndex = 4;
             button5.Text = "Episode 05";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -102,6 +106,7 @@
             button6.TabIndex = 5;
             button6.Text = "Episode 06";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
@@ -112,6 +117,7 @@
             button7.TabIndex = 6;
             button7.Text = "Episode 07";
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // button8
             // 
@@ -122,6 +128,7 @@
             button8.TabIndex = 7;
             button8.Text = "Episode 08";
             button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
             // 
             // button9
             // 
@@ -132,6 +139,7 @@
             button9.TabIndex = 8;
             button9.Text = "Episode 09";
             button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
             // 
             // button10
             // 
@@ -142,6 +150,7 @@
             button10.TabIndex = 9;
             button10.Text = "Episode 10";
             button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
             // 
             // button11
             // 
@@ -152,6 +161,7 @@
             button11.TabIndex = 10;
             button11.Text = "Episode 11";
             button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
             // 
             // button12
             // 
@@ -162,8 +172,9 @@
             button12.TabIndex = 11;
             button12.Text = "Episode 12";
             button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click;
             // 
-            // FormVideoEpisodeSelector
+            // OcculticNineEpisodeSelector
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -181,7 +192,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Name = "FormVideoEpisodeSelector";
+            Name = "OcculticNineEpisodeSelector";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormVideoEpisodeSelector";
             Load += FormVideoEpisodeSelector_Load;

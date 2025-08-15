@@ -51,12 +51,12 @@ namespace SciADV_ReLauncher.Forms
             if (_mp.IsPlaying)
             {
                 _mp.Pause();
-                button3.Text = "Continue";
+                button2.Text = "Continue";
             }
             else
             {
                 _mp.Play();
-                button3.Text = "Pause";
+                button2.Text = "Pause";
             }
         }
 
