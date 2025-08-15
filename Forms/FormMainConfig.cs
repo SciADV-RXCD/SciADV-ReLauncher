@@ -20,7 +20,20 @@ namespace SciADV_ReLauncher.Forms
         public FormMainConfig()
         {
             InitializeComponent();
-            
+        }
+
+        public void ReadConfigFile()
+        {
+            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+
+            FormMain.CHNmainGamePath = mainSettings.Read("CHNgame", "general");
+            FormMain.SGmainGamePath = mainSettings.Read("SGgame", "general");
+            FormMain.RNEmainGamePath = mainSettings.Read("RNEgame", "general");
+            FormMain.CCmainGamePath = mainSettings.Read("CCgame", "general");
+            FormMain.SG0mainGamePath = mainSettings.Read("SG0game", "general");
+            FormMain.RNDmainGamePath = mainSettings.Read("RNDgame", "general");
+            FormMain.OCanimePath = mainSettings.Read("OCanime", "general");
+            FormMain.ACmainGamePath = mainSettings.Read("ACgame", "general");
         }
 
         private void FormMainConfig_Load(object sender, EventArgs e)
@@ -86,6 +99,8 @@ namespace SciADV_ReLauncher.Forms
                     textBox1.Text = CHNMainGame.SelectedPath;
                     mainSettings.Write("CHNgame", CHNMainGame.SelectedPath, "general");
                     Console.WriteLine(mainSettings.Read("CHNgame", "general"));
+                    ReadConfigFile();
+                    Console.WriteLine("CHAOS;HEAD NOAH Saved and Config Reloaded!");
                 }
                 else
                 {
@@ -110,6 +125,8 @@ namespace SciADV_ReLauncher.Forms
                     textBox2.Text = SGMainGame.SelectedPath;
                     mainSettings.Write("SGgame", SGMainGame.SelectedPath, "general");
                     Console.WriteLine(mainSettings.Read("SGgame", "general"));
+                    ReadConfigFile();
+                    Console.WriteLine("STEINS;GATE Saved and Config Reloaded!");
                 }
                 else
                 {
@@ -133,6 +150,8 @@ namespace SciADV_ReLauncher.Forms
                     textBox3.Text = RNEMainGame.SelectedPath;
                     mainSettings.Write("RNEgame", RNEMainGame.SelectedPath, "general");
                     Console.WriteLine(mainSettings.Read("RNEgame", "general"));
+                    ReadConfigFile();
+                    Console.WriteLine("ROBOTICS;NOTES ELITE Saved and Config Reloaded!");
                 }
                 else
                 {
@@ -155,6 +174,8 @@ namespace SciADV_ReLauncher.Forms
                     textBox4.Text = CCMainGame.SelectedPath;
                     mainSettings.Write("CCgame", CCMainGame.SelectedPath, "general");
                     Console.WriteLine(mainSettings.Read("CCgame", "general"));
+                    ReadConfigFile();
+                    Console.WriteLine("CHAOS;CHILD Saved and Config Reloaded!");
                 }
                 else
                 {
@@ -177,6 +198,8 @@ namespace SciADV_ReLauncher.Forms
                     textBox5.Text = SG0MainGame.SelectedPath;
                     mainSettings.Write("SG0game", SG0MainGame.SelectedPath, "general");
                     Console.WriteLine(mainSettings.Read("SG0game", "general"));
+                    ReadConfigFile();
+                    Console.WriteLine("STEINS;GATE 0 Saved and Config Reloaded!");
                 }
                 else
                 {
@@ -199,6 +222,8 @@ namespace SciADV_ReLauncher.Forms
                     textBox6.Text = RNDMainGame.SelectedPath;
                     mainSettings.Write("RNDgame", RNDMainGame.SelectedPath, "general");
                     Console.WriteLine(mainSettings.Read("RNDgame", "general"));
+                    ReadConfigFile();
+                    Console.WriteLine("ROBOTICS;NOTES DaSH Saved and Config Reloaded!");
                 }
                 else
                 {
@@ -221,6 +246,8 @@ namespace SciADV_ReLauncher.Forms
                     textBox7.Text = OCmainAnime.SelectedPath;
                     mainSettings.Write("OCanime", OCmainAnime.SelectedPath, "general");
                     Console.WriteLine(mainSettings.Read("OCanime", "general"));
+                    ReadConfigFile();
+                    Console.WriteLine("OCCULTIC;NINE Saved and Config Reloaded!");
                 }
                 else
                 {
@@ -243,6 +270,8 @@ namespace SciADV_ReLauncher.Forms
                     textBox8.Text = ACMainGame.SelectedPath;
                     mainSettings.Write("ACgame", ACMainGame.SelectedPath, "general");
                     Console.WriteLine(mainSettings.Read("ACgame", "general"));
+                    ReadConfigFile();
+                    Console.WriteLine("ANONYMOUS;CODE Saved and Config Reloaded!");
                 }
                 else
                 {
