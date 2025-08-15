@@ -140,6 +140,7 @@
             Controls.Add(videoView1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormVideoPlayer";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Video Player";
             Load += FormVideoPlayer_Load;

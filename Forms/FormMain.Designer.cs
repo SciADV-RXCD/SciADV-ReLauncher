@@ -30,6 +30,7 @@ namespace SciADV_ReLauncher
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             button1 = new Button();
             pictureBox1 = new PictureBox();
             button2 = new Button();
@@ -349,7 +350,9 @@ namespace SciADV_ReLauncher
             Controls.Add(pictureBox1);
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormMain";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SciADV-ReLauncher";
             Load += FormMain_Load;

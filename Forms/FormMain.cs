@@ -112,7 +112,7 @@ namespace SciADV_ReLauncher
                 OCanimePath = mainSettings.Read("OCanime", "general");
                 ACmainGamePath = mainSettings.Read("ACgame", "general");
             }
-            else if (File.Exists("Config\\mainSettings.ini") == false) 
+            else if (File.Exists("Config\\mainSettings.ini") == false)
             {
                 File.Create("Config\\mainSettings.ini").Close();
                 IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
@@ -124,6 +124,11 @@ namespace SciADV_ReLauncher
                 mainSettings.Write("RNDgame", "NONE", "general");
                 mainSettings.Write("OCanime", "NONE", "general");
                 mainSettings.Write("ACgame", "NONE", "general");
+
+                //CHN SIDE ENTRIES
+                mainSettings.Write("ChaosGate", "NONE", "CHNSideEntries");
+                mainSettings.Write("ChaosChat", "NONE", "CHNSideEntries");
+                mainSettings.Write("CHLoveChuChu", "NONE", "CHNSideEntries");
             }
         }
 
@@ -158,6 +163,8 @@ namespace SciADV_ReLauncher
         private void button2_Click(object sender, EventArgs e)
         {
             //CHAOS;HEAD Side Entries
+            FormCHNSide formCHNSide = new FormCHNSide();
+            formCHNSide.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)

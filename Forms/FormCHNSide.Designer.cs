@@ -28,12 +28,113 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormCHNSide";
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            SuspendLayout();
+            // 
+            // button1
+            // 
+            button1.BackgroundImage = Properties.Resources.ConfigIcon1;
+            button1.BackgroundImageLayout = ImageLayout.Zoom;
+            button1.Location = new Point(705, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(70, 70);
+            button1.TabIndex = 0;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            button2.Location = new Point(12, 12);
+            button2.Name = "button2";
+            button2.Size = new Size(225, 70);
+            button2.TabIndex = 1;
+            button2.Text = "CHAOS;GATE";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            button3.Location = new Point(243, 12);
+            button3.Name = "button3";
+            button3.Size = new Size(225, 70);
+            button3.TabIndex = 2;
+            button3.Text = "CHAOS;HEAD\r\nLove Chu☆Chu!\r\n";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            button4.Location = new Point(474, 12);
+            button4.Name = "button4";
+            button4.Size = new Size(225, 70);
+            button4.TabIndex = 3;
+            button4.Text = "CHAOS;CHAT";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // label1
+            // 
+            label1.Location = new Point(12, 85);
+            label1.Name = "label1";
+            label1.Size = new Size(225, 82);
+            label1.TabIndex = 4;
+            label1.Text = "A short story featuring an appearance from \r\nSteins;Gate's protagonist Okabe Rintaro. \r\nTakes place during Chapter 7: Psychopath.";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            label2.Location = new Point(243, 85);
+            label2.Name = "label2";
+            label2.Size = new Size(225, 82);
+            label2.TabIndex = 5;
+            label2.Text = "A fandisk visual novel that acts \r\nas a direct sequel to \r\nCHAOS;HEAD NoAH.";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            label3.Location = new Point(474, 85);
+            label3.Name = "label3";
+            label3.Size = new Size(225, 82);
+            label3.TabIndex = 6;
+            label3.Text = "Small Bonus Chatlog from Takumi and Grimm\r\n";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // FormCHNSide
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(787, 183);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Name = "FormCHNSide";
+            ShowIcon = false;
+            Text = "CHAOS;HEAD - Side Entries";
+            Load += FormCHNSide_Load;
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }

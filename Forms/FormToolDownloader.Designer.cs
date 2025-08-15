@@ -83,7 +83,8 @@
             Controls.Add(label2);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormToolDownloader";
-            Text = "FormToolDownloader";
+            ShowIcon = false;
+            Text = "Tool Downloader";
             Load += FormToolDownloader_Load;
             ResumeLayout(false);
         }

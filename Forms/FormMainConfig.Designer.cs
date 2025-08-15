@@ -301,6 +301,7 @@
             Controls.Add(textBox1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormMainConfig";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Main Config";
             Load += FormMainConfig_Load;

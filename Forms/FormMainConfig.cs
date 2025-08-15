@@ -11,8 +11,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TinyINIController;
 
-//using static SciADV_ReLauncher.ClassJSONConfig;
-
 namespace SciADV_ReLauncher.Forms
 {
     public partial class FormMainConfig : Form
@@ -38,50 +36,16 @@ namespace SciADV_ReLauncher.Forms
 
         private void FormMainConfig_Load(object sender, EventArgs e)
         {
-            if (File.Exists("Config\\mainSettings.ini") == true)
-            {
-                IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
 
-                if (mainSettings.KeyExists("CHNgame", "general") == true)
-                {
-                    textBox1.Text = mainSettings.Read("CHNgame", "general");
-                }
-
-                if (mainSettings.KeyExists("SGgame", "general") == true)
-                {
-                    textBox2.Text = mainSettings.Read("SGgame", "general");
-                }
-
-                if (mainSettings.KeyExists("RNEgame", "general") == true)
-                {
-                    textBox3.Text = mainSettings.Read("RNEgame", "general");
-                }
-
-                if (mainSettings.KeyExists("CCgame", "general") == true)
-                {
-                    textBox4.Text = mainSettings.Read("CCgame", "general");
-                }
-
-                if (mainSettings.KeyExists("SG0game", "general") == true)
-                {
-                    textBox5.Text = mainSettings.Read("SG0game", "general");
-                }
-
-                if (mainSettings.KeyExists("RNDgame", "general") == true)
-                {
-                    textBox6.Text = mainSettings.Read("RNDgame", "general");
-                }
-
-                if (mainSettings.KeyExists("OCanime", "general") == true)
-                {
-                    textBox7.Text = mainSettings.Read("OCanime", "general");
-                }
-
-                if (mainSettings.KeyExists("ACgame", "general") == true)
-                {
-                    textBox8.Text = mainSettings.Read("ACgame", "general");
-                }
-            }
+            textBox1.Text = mainSettings.Read("CHNgame", "general");
+            textBox2.Text = mainSettings.Read("SGgame", "general");
+            textBox3.Text = mainSettings.Read("RNEgame", "general");
+            textBox4.Text = mainSettings.Read("CCgame", "general");
+            textBox5.Text = mainSettings.Read("SG0game", "general");
+            textBox6.Text = mainSettings.Read("RNDgame", "general");
+            textBox7.Text = mainSettings.Read("OCanime", "general");
+            textBox8.Text = mainSettings.Read("ACgame", "general");
         }
 
         public void button2_Click(object sender, EventArgs e)

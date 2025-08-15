@@ -8,7 +8,12 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>SciADV-Icon.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="SciADV-Icon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="LibVLCSharp" Version="3.9.4" />

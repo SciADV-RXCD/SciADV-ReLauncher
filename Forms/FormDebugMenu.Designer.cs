@@ -47,6 +47,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormDebugMenu";
             Text = "FormDebugMenu";
             ResumeLayout(false);

@@ -193,8 +193,9 @@
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "OcculticNineEpisodeSelector";
+            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormVideoEpisodeSelector";
+            Text = "OCCULTIC;NINE Episode Selector";
             Load += FormVideoEpisodeSelector_Load;
             ResumeLayout(false);
         }
