@@ -3,6 +3,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Text.Json;
+using TinyINIController;
 
 namespace SciADV_ReLauncher
 {
@@ -16,8 +18,9 @@ namespace SciADV_ReLauncher
         [DllImport("kernel32.dll")]
         static extern IntPtr GetConsoleWindow();
 
-        //Common Tool Paths
+        //Common Strings
         string LocaleEmulatorToolPath = "Tools\\LocaleEmulator\\LEProc.exe";
+        
 
         //Currently unused, but kept for alternative use
         string VideoPlayerToolPath = "Tools\\VideoPlayer\\mpv.exe";
@@ -27,6 +30,8 @@ namespace SciADV_ReLauncher
         {
             DebugModeEnablerPart2ANDRandomQuotesTitle();
             RandomQuotesTitle();
+
+            ReadConfigFile();
 
             if (File.Exists(LocaleEmulatorToolPath) == false)
             {
@@ -92,9 +97,72 @@ namespace SciADV_ReLauncher
 
 
 
+
+        public void ReadConfigFile()
+        {
+            if (File.Exists("Config\\mainSettings.ini") == false)
+            {
+                IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+
+                if (mainSettings.KeyExists("CHNgame", "general") == false)
+                {
+                    mainSettings.Write("CHNgame", "NONE", "general");
+                }
+
+                if (mainSettings.KeyExists("SGgame", "general") == false)
+                {
+                    mainSettings.Write("SGgame", "NONE", "general");
+                }
+
+                if (mainSettings.KeyExists("RNEgame", "general") == false)
+                {
+                    mainSettings.Write("RNEgame", "NONE", "general");
+                }
+
+                if (mainSettings.KeyExists("CCgame", "general") == false)
+                {
+                    mainSettings.Write("CCgame", "NONE", "general");
+                }
+
+                if (mainSettings.KeyExists("SG0game", "general") == false)
+                {
+                    mainSettings.Write("SG0game", "NONE", "general");
+                }
+
+                if (mainSettings.KeyExists("RNDgame", "general") == false)
+                {
+                    mainSettings.Write("RNDgame", "NONE", "general");
+                }
+
+                if (mainSettings.KeyExists("OCanime", "general") == false)
+                {
+                    mainSettings.Write("OCanime", "NONE", "general");
+                }
+
+                if (mainSettings.KeyExists("ACgame", "general") == false)
+                {
+                    mainSettings.Write("ACgame", "NONE", "general");
+                }
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             //CHAOS;HEAD
+            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+
+            Process CHNgame = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = $@"{mainSettings.Read("CHNgame", "general")}\\Game_Steam.exe",
+                }
+            };
+
+            Directory.SetCurrentDirectory($@"{mainSettings.Read("CHNgame", "general")}");
+            CHNgame.Start();
+            Console.WriteLine("\nCHAOS;HEAD NoAH Launched!");
+            ActiveForm.WindowState = FormWindowState.Minimized;
         }
 
         private void button2_Click(object sender, EventArgs e)

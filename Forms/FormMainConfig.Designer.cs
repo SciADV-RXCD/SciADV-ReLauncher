@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            label1 = new Label();
             textBox1 = new TextBox();
             label2 = new Label();
             button2 = new Button();
@@ -55,26 +53,6 @@
             label9 = new Label();
             textBox8 = new TextBox();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(654, 272);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 34);
-            button1.TabIndex = 0;
-            button1.Text = "Save";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(515, 272);
-            label1.Name = "label1";
-            label1.Size = new Size(133, 34);
-            label1.TabIndex = 1;
-            label1.Text = "Config Saved!";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Visible = false;
             // 
             // textBox1
             // 
@@ -186,7 +164,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(257, 283);
+            button6.Location = new Point(654, 27);
             button6.Name = "button6";
             button6.Size = new Size(75, 23);
             button6.TabIndex = 16;
@@ -197,7 +175,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(12, 265);
+            label6.Location = new Point(409, 9);
             label6.Name = "label6";
             label6.Size = new Size(143, 15);
             label6.TabIndex = 15;
@@ -205,7 +183,7 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(12, 283);
+            textBox5.Location = new Point(409, 27);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
             textBox5.Size = new Size(239, 23);
@@ -213,7 +191,7 @@
             // 
             // button7
             // 
-            button7.Location = new Point(654, 27);
+            button7.Location = new Point(654, 91);
             button7.Name = "button7";
             button7.Size = new Size(75, 23);
             button7.TabIndex = 19;
@@ -224,7 +202,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(409, 9);
+            label7.Location = new Point(409, 73);
             label7.Name = "label7";
             label7.Size = new Size(192, 15);
             label7.TabIndex = 18;
@@ -232,7 +210,7 @@
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(409, 28);
+            textBox6.Location = new Point(409, 92);
             textBox6.Name = "textBox6";
             textBox6.ReadOnly = true;
             textBox6.Size = new Size(239, 23);
@@ -240,7 +218,7 @@
             // 
             // button8
             // 
-            button8.Location = new Point(654, 91);
+            button8.Location = new Point(654, 155);
             button8.Name = "button8";
             button8.Size = new Size(75, 23);
             button8.TabIndex = 22;
@@ -251,7 +229,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(409, 73);
+            label8.Location = new Point(409, 137);
             label8.Name = "label8";
             label8.Size = new Size(167, 15);
             label8.TabIndex = 21;
@@ -259,7 +237,7 @@
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(409, 91);
+            textBox7.Location = new Point(409, 155);
             textBox7.Name = "textBox7";
             textBox7.ReadOnly = true;
             textBox7.Size = new Size(239, 23);
@@ -267,7 +245,7 @@
             // 
             // button9
             // 
-            button9.Location = new Point(654, 155);
+            button9.Location = new Point(654, 219);
             button9.Name = "button9";
             button9.Size = new Size(75, 23);
             button9.TabIndex = 25;
@@ -278,7 +256,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(409, 137);
+            label9.Location = new Point(409, 201);
             label9.Name = "label9";
             label9.Size = new Size(176, 15);
             label9.TabIndex = 24;
@@ -286,7 +264,7 @@
             // 
             // textBox8
             // 
-            textBox8.Location = new Point(409, 155);
+            textBox8.Location = new Point(409, 219);
             textBox8.Name = "textBox8";
             textBox8.ReadOnly = true;
             textBox8.Size = new Size(239, 23);
@@ -296,7 +274,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(745, 319);
+            ClientSize = new Size(745, 256);
             Controls.Add(button9);
             Controls.Add(label9);
             Controls.Add(textBox8);
@@ -321,8 +299,6 @@
             Controls.Add(button2);
             Controls.Add(label2);
             Controls.Add(textBox1);
-            Controls.Add(label1);
-            Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormMainConfig";
             StartPosition = FormStartPosition.CenterScreen;
@@ -333,9 +309,6 @@
         }
 
         #endregion
-
-        private Button button1;
-        private Label label1;
         private TextBox textBox1;
         private Label label2;
         private Button button2;
