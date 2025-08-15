@@ -132,8 +132,6 @@ namespace SciADV_ReLauncher.Forms
         {
             //SAVE CONFIGURATION
             //NOT NEEDED FOR NOW???
-            button1.Enabled = false;
-            button1.Visible = false;
         }
     }
 }
