@@ -22,7 +22,7 @@ namespace SciADV_ReLauncher.Forms
 
         public void ReadConfigFile()
         {
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FormMain.CHNmainGamePath = mainSettings.Read("CHNgame", "general");
             FormMain.SGmainGamePath = mainSettings.Read("SGgame", "general");
@@ -36,7 +36,7 @@ namespace SciADV_ReLauncher.Forms
 
         private void FormMainConfig_Load(object sender, EventArgs e)
         {
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             textBox1.Text = mainSettings.Read("CHNgame", "general");
             textBox2.Text = mainSettings.Read("SGgame", "general");
@@ -52,7 +52,7 @@ namespace SciADV_ReLauncher.Forms
         {
             //CHAOS;HEAD NOAH
 
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
             
             FolderBrowserDialog CHNMainGame = new FolderBrowserDialog();
             if (CHNMainGame.ShowDialog() == DialogResult.OK)
@@ -78,7 +78,7 @@ namespace SciADV_ReLauncher.Forms
         {
             //STEINS;GATE
 
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FolderBrowserDialog SGMainGame = new FolderBrowserDialog();
             if (SGMainGame.ShowDialog() == DialogResult.OK)
@@ -104,7 +104,7 @@ namespace SciADV_ReLauncher.Forms
         {
             //ROBOTICS;NOTES ELITE
 
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FolderBrowserDialog RNEMainGame = new FolderBrowserDialog();
             if (RNEMainGame.ShowDialog() == DialogResult.OK)
@@ -128,7 +128,7 @@ namespace SciADV_ReLauncher.Forms
         private void button5_Click(object sender, EventArgs e)
         {
             //CHAOS;CHILD
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
             FolderBrowserDialog CCMainGame = new FolderBrowserDialog();
             if (CCMainGame.ShowDialog() == DialogResult.OK)
             {
@@ -152,7 +152,7 @@ namespace SciADV_ReLauncher.Forms
         private void button6_Click(object sender, EventArgs e)
         {
             //STEINS;GATE 0
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
             FolderBrowserDialog SG0MainGame = new FolderBrowserDialog();
             if (SG0MainGame.ShowDialog() == DialogResult.OK)
             {
@@ -176,7 +176,7 @@ namespace SciADV_ReLauncher.Forms
         private void button7_Click(object sender, EventArgs e)
         {
             //ROBOTICS;NOTES DaSH
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
             FolderBrowserDialog RNDMainGame = new FolderBrowserDialog();
             if (RNDMainGame.ShowDialog() == DialogResult.OK)
             {
@@ -200,7 +200,7 @@ namespace SciADV_ReLauncher.Forms
         private void button8_Click(object sender, EventArgs e)
         {
             //OCCULTIC;NINE
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
             FolderBrowserDialog OCmainAnime = new FolderBrowserDialog();
             if (OCmainAnime.ShowDialog() == DialogResult.OK)
             {
@@ -224,7 +224,7 @@ namespace SciADV_ReLauncher.Forms
         private void button9_Click(object sender, EventArgs e)
         {
             //ANONYMOUS;CODE
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
             FolderBrowserDialog ACMainGame = new FolderBrowserDialog();
             if (ACMainGame.ShowDialog() == DialogResult.OK)
             {

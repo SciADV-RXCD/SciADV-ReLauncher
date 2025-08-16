@@ -20,7 +20,7 @@ namespace SciADV_ReLauncher.Forms
 
         private void FormCHNSideConfig_Load(object sender, EventArgs e)
         {
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             textBox1.Text = mainSettings.Read("ChaosGate", "CHNSideEntries");
             textBox2.Text = mainSettings.Read("CHLoveChuChu", "CHNSideEntries");
@@ -29,7 +29,7 @@ namespace SciADV_ReLauncher.Forms
 
         public void ReadConfigFile()
         {
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FormCHNSide.ChaosGatePath = mainSettings.Read("ChaosGate", "CHNSideEntries");
             FormCHNSide.ChaosChatPath = mainSettings.Read("ChaosChat", "CHNSideEntries");
@@ -39,7 +39,7 @@ namespace SciADV_ReLauncher.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             //CHAOS;GATE
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             OpenFileDialog chaosGatePDF = new OpenFileDialog
             {
@@ -61,7 +61,7 @@ namespace SciADV_ReLauncher.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             //CHAOS;HEAD Love ChuChu
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FolderBrowserDialog CHLoveChuChuGame = new FolderBrowserDialog();
             if (CHLoveChuChuGame.ShowDialog() == DialogResult.OK)
@@ -85,7 +85,7 @@ namespace SciADV_ReLauncher.Forms
         private void button3_Click(object sender, EventArgs e)
         {
             //CHAOS;CHAT
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             OpenFileDialog chaosChatPDF = new OpenFileDialog
             {

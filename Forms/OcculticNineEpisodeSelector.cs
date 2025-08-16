@@ -29,7 +29,7 @@ namespace SciADV_ReLauncher.Forms
         {
             this.Close();
 
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FormVideoPlayer VideoPlayer = new FormVideoPlayer();
             FormVideoPlayer.VideoFilepathFinal = $@"{mainSettings.Read("OCanime", "general")}\\Episode 01.mkv";
@@ -40,7 +40,7 @@ namespace SciADV_ReLauncher.Forms
         {
             this.Close();
 
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FormVideoPlayer VideoPlayer = new FormVideoPlayer();
             FormVideoPlayer.VideoFilepathFinal = $@"{mainSettings.Read("OCanime", "general")}\\Episode 02.mkv";
@@ -51,7 +51,7 @@ namespace SciADV_ReLauncher.Forms
         {
             this.Close();
 
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FormVideoPlayer VideoPlayer = new FormVideoPlayer();
             FormVideoPlayer.VideoFilepathFinal = $@"{mainSettings.Read("OCanime", "general")}\\Episode 03.mkv";
@@ -62,7 +62,7 @@ namespace SciADV_ReLauncher.Forms
         {
             this.Close();
 
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FormVideoPlayer VideoPlayer = new FormVideoPlayer();
             FormVideoPlayer.VideoFilepathFinal = $@"{mainSettings.Read("OCanime", "general")}\\Episode 04.mkv";
@@ -73,7 +73,7 @@ namespace SciADV_ReLauncher.Forms
         {
             this.Close();
 
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FormVideoPlayer VideoPlayer = new FormVideoPlayer();
             FormVideoPlayer.VideoFilepathFinal = $@"{mainSettings.Read("OCanime", "general")}\\Episode 05.mkv";
@@ -84,7 +84,7 @@ namespace SciADV_ReLauncher.Forms
         {
             this.Close();
 
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FormVideoPlayer VideoPlayer = new FormVideoPlayer();
             FormVideoPlayer.VideoFilepathFinal = $@"{mainSettings.Read("OCanime", "general")}\\Episode 06.mkv";
@@ -95,7 +95,7 @@ namespace SciADV_ReLauncher.Forms
         {
             this.Close();
 
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FormVideoPlayer VideoPlayer = new FormVideoPlayer();
             FormVideoPlayer.VideoFilepathFinal = $@"{mainSettings.Read("OCanime", "general")}\\Episode 07.mkv";
@@ -106,7 +106,7 @@ namespace SciADV_ReLauncher.Forms
         {
             this.Close();
 
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FormVideoPlayer VideoPlayer = new FormVideoPlayer();
             FormVideoPlayer.VideoFilepathFinal = $@"{mainSettings.Read("OCanime", "general")}\\Episode 08.mkv";
@@ -117,7 +117,7 @@ namespace SciADV_ReLauncher.Forms
         {
             this.Close();
 
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FormVideoPlayer VideoPlayer = new FormVideoPlayer();
             FormVideoPlayer.VideoFilepathFinal = $@"{mainSettings.Read("OCanime", "general")}\\Episode 09.mkv";
@@ -128,7 +128,7 @@ namespace SciADV_ReLauncher.Forms
         {
             this.Close();
 
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FormVideoPlayer VideoPlayer = new FormVideoPlayer();
             FormVideoPlayer.VideoFilepathFinal = $@"{mainSettings.Read("OCanime", "general")}\\Episode 10.mkv";
@@ -139,7 +139,7 @@ namespace SciADV_ReLauncher.Forms
         {
             this.Close();
 
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FormVideoPlayer VideoPlayer = new FormVideoPlayer();
             FormVideoPlayer.VideoFilepathFinal = $@"{mainSettings.Read("OCanime", "general")}\\Episode 11.mkv";
@@ -150,7 +150,7 @@ namespace SciADV_ReLauncher.Forms
         {
             this.Close();
 
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             FormVideoPlayer VideoPlayer = new FormVideoPlayer();
             FormVideoPlayer.VideoFilepathFinal = $@"{mainSettings.Read("OCanime", "general")}\\Episode 12.mkv";

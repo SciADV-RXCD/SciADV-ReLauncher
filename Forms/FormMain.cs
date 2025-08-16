@@ -19,7 +19,7 @@ namespace SciADV_ReLauncher
         static extern IntPtr GetConsoleWindow();
 
         //Common Strings
-        string LocaleEmulatorToolPath = "Tools\\LocaleEmulator\\LEProc.exe";
+        string LocaleEmulatorToolPath = @$"{AppContext.BaseDirectory}\\Tools\\LocaleEmulator\\LEProc.exe";
 
         //Currently unused, but kept for alternative use
         string VideoPlayerToolPath = "Tools\\VideoPlayer\\mpv.exe";
@@ -51,7 +51,7 @@ namespace SciADV_ReLauncher
         {
             if (GetConsoleWindow() != IntPtr.Zero)
             {
-                string[] quotes = File.ReadAllLines("Config\\quotes.txt");
+                string[] quotes = File.ReadAllLines(@$"{AppContext.BaseDirectory}\\Config\\quotes.txt");
 
                 Random rndQuotes = new Random();
 
@@ -68,7 +68,7 @@ namespace SciADV_ReLauncher
         [ConditionalAttribute("RELEASE")]
         public void RandomQuotesTitle()
         {
-            string[] quotes = File.ReadAllLines("Config\\quotes.txt");
+            string[] quotes = File.ReadAllLines(@$"{AppContext.BaseDirectory}\\Config\\quotes.txt");
 
             Random rndQuotes = new Random();
 
@@ -99,23 +99,27 @@ namespace SciADV_ReLauncher
 
         public void ReadConfigFile()
         {
-            if (File.Exists("Config\\mainSettings.ini"))
+            if (File.Exists(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini"))
             {
-                IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+                IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
-                CHNmainGamePath = mainSettings.Read("CHNgame", "general");
-                SGmainGamePath = mainSettings.Read("SGgame", "general");
-                RNEmainGamePath = mainSettings.Read("RNEgame", "general");
-                CCmainGamePath = mainSettings.Read("CCgame", "general");
-                SG0mainGamePath = mainSettings.Read("SG0game", "general");
-                RNDmainGamePath = mainSettings.Read("RNDgame", "general");
-                OCanimePath = mainSettings.Read("OCanime", "general");
-                ACmainGamePath = mainSettings.Read("ACgame", "general");
+                FormMain.CHNmainGamePath = mainSettings.Read("CHNgame", "general");
+                FormMain.SGmainGamePath = mainSettings.Read("SGgame", "general");
+                FormMain.RNEmainGamePath = mainSettings.Read("RNEgame", "general");
+                FormMain.CCmainGamePath = mainSettings.Read("CCgame", "general");
+                FormMain.SG0mainGamePath = mainSettings.Read("SG0game", "general");
+                FormMain.RNDmainGamePath = mainSettings.Read("RNDgame", "general");
+                FormMain.OCanimePath = mainSettings.Read("OCanime", "general");
+                FormMain.ACmainGamePath = mainSettings.Read("ACgame", "general");
+
+                FormCHNSide.ChaosGatePath = mainSettings.Read("ChaosGate", "CHNSideEntries");
+                FormCHNSide.ChaosChatPath = mainSettings.Read("ChaosChat", "CHNSideEntries");
+                FormCHNSide.CHLoveChuChuPath = mainSettings.Read("CHLoveChuChu", "CHNSideEntries");
             }
-            else if (File.Exists("Config\\mainSettings.ini") == false)
+            else if (File.Exists(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini") == false)
             {
-                File.Create("Config\\mainSettings.ini").Close();
-                IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+                File.Create(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini").Close();
+                IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
                 mainSettings.Write("CHNgame", "NONE", "general");
                 mainSettings.Write("SGgame", "NONE", "general");
                 mainSettings.Write("RNEgame", "NONE", "general");
@@ -144,17 +148,16 @@ namespace SciADV_ReLauncher
         private void button1_Click(object sender, EventArgs e)
         {
             //CHAOS;HEAD
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             Process CHNmainGame = new Process
             {
                 StartInfo = new ProcessStartInfo
                 {
                     FileName = $@"{CHNmainGamePath}\\Game_Steam.exe",
+                    WorkingDirectory = CHNmainGamePath,
                 }
             };
-
-            Directory.SetCurrentDirectory($@"{CHNmainGamePath}");
             CHNmainGame.Start();
             Console.WriteLine("\nCHAOS;HEAD NoAH Launched!");
             this.WindowState = FormWindowState.Minimized;
@@ -170,19 +173,16 @@ namespace SciADV_ReLauncher
         private void button3_Click(object sender, EventArgs e)
         {
             //STEINS;GATE
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             Process SGmainGame = new Process
             {
                 StartInfo = new ProcessStartInfo
                 {
                     FileName = $@"{SGmainGamePath}\\LauncherC0.exe",
+                    WorkingDirectory = SGmainGamePath,
                 }
             };
-
-            //Directory.SetCurrentDirectory(AppContext.BaseDirectory);
-
-            Directory.SetCurrentDirectory($@"{SGmainGamePath}");
             SGmainGame.Start();
             Console.WriteLine("\nSTEINS;GATE Launched!");
             this.WindowState = FormWindowState.Minimized;
@@ -196,17 +196,16 @@ namespace SciADV_ReLauncher
         private void button5_Click(object sender, EventArgs e)
         {
             //ROBOTICS;NOTES
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             Process RNEmainGame = new Process
             {
                 StartInfo = new ProcessStartInfo
                 {
                     FileName = $@"{RNEmainGamePath}\\LauncherC0.exe",
+                    WorkingDirectory = RNEmainGamePath,
                 }
             };
-
-            Directory.SetCurrentDirectory($@"{RNEmainGamePath}");
             RNEmainGame.Start();
             Console.WriteLine("\nROBOTICS;NOTES ELITE Launched!");
             this.WindowState = FormWindowState.Minimized;
@@ -220,17 +219,16 @@ namespace SciADV_ReLauncher
         private void button7_Click(object sender, EventArgs e)
         {
             //CHAOS;CHILD
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
 
             Process CCmainGame = new Process
             {
                 StartInfo = new ProcessStartInfo
                 {
                     FileName = $@"{CCmainGamePath}\\LauncherC0.exe",
+                    WorkingDirectory = CCmainGamePath
                 }
             };
-
-            Directory.SetCurrentDirectory($@"{CCmainGamePath}");
             CCmainGame.Start();
             Console.WriteLine("\nCHAOS;CHILD Launched!");
             this.WindowState = FormWindowState.Minimized;
@@ -244,16 +242,15 @@ namespace SciADV_ReLauncher
         private void button9_Click(object sender, EventArgs e)
         {
             //STEINS;GATE 0
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
             Process SG0mainGame = new Process
             {
                 StartInfo = new ProcessStartInfo
                 {
                     FileName = $@"{SG0mainGamePath}\\LauncherC0.exe",
+                    WorkingDirectory = SG0mainGamePath
                 }
             };
-
-            Directory.SetCurrentDirectory($@"{SG0mainGamePath}");
             SG0mainGame.Start();
             Console.WriteLine("\nSTEINS;GATE 0 Launched!");
             this.WindowState = FormWindowState.Minimized;
@@ -267,16 +264,15 @@ namespace SciADV_ReLauncher
         private void button11_Click(object sender, EventArgs e)
         {
             //ROBOTICS;NOTES DaSH
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
             Process RNDmainGame = new Process
             {
                 StartInfo = new ProcessStartInfo
                 {
                     FileName = $@"{RNDmainGamePath}\\LauncherC0.exe",
+                    WorkingDirectory = RNDmainGamePath
                 }
             };
-
-            Directory.SetCurrentDirectory($@"{RNDmainGamePath}");
             RNDmainGame.Start();
             Console.WriteLine("\nROBOTICS;NOTES DaSH Launched!");
             this.WindowState = FormWindowState.Minimized;
@@ -298,15 +294,15 @@ namespace SciADV_ReLauncher
         private void button13_Click(object sender, EventArgs e)
         {
             //ANONYMOUS;CODE
-            IniFile mainSettings = new IniFile("Config\\mainSettings.ini");
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
             Process ACmainGame = new Process
             {
                 StartInfo = new ProcessStartInfo
                 {
                     FileName = $@"{ACmainGamePath}\\MAGESgamelauncher.exe",
+                    WorkingDirectory = ACmainGamePath,
                 }
             };
-            Directory.SetCurrentDirectory($@"{ACmainGamePath}");
             ACmainGame.Start();
             Console.WriteLine("\nANONYMOUS;CODE Launched!");
             this.WindowState = FormWindowState.Minimized;
