@@ -27,14 +27,7 @@ namespace SciADV_ReLauncher.Forms
             textBox3.Text = mainSettings.Read("ChaosChat", "CHNSideEntries");
         }
 
-        public void ReadConfigFile()
-        {
-            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
-
-            FormCHNSide.ChaosGatePath = mainSettings.Read("ChaosGate", "CHNSideEntries");
-            FormCHNSide.ChaosChatPath = mainSettings.Read("ChaosChat", "CHNSideEntries");
-            FormCHNSide.CHLoveChuChuPath = mainSettings.Read("CHLoveChuChu", "CHNSideEntries");
-        }
+        Functions useFunctions = new Functions();
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -53,7 +46,7 @@ namespace SciADV_ReLauncher.Forms
                 textBox1.Text = chaosGatePDF.FileName;
                 mainSettings.Write("ChaosGate", chaosGatePDF.FileName, "CHNSideEntries");
                 Console.WriteLine(mainSettings.Read("ChaosGate", "CHNSideEntries"));
-                ReadConfigFile();
+                useFunctions.ReadConfigFile();
                 Console.WriteLine("CHAOS;GATE Saved and Config Reloaded!");
             }
         }
@@ -71,7 +64,7 @@ namespace SciADV_ReLauncher.Forms
                     textBox2.Text = CHLoveChuChuGame.SelectedPath;
                     mainSettings.Write("CHLoveChuChu", CHLoveChuChuGame.SelectedPath, "CHNSideEntries");
                     Console.WriteLine(mainSettings.Read("CHLoveChuChu", "CHNSideEntries"));
-                    ReadConfigFile();
+                    useFunctions.ReadConfigFile();
                     Console.WriteLine("CHAOS;HEAD Love Chu☆Chu! Saved and Config Reloaded!");
                 }
                 else
@@ -99,7 +92,7 @@ namespace SciADV_ReLauncher.Forms
                 textBox3.Text = chaosChatPDF.FileName;
                 mainSettings.Write("ChaosChat", chaosChatPDF.FileName, "CHNSideEntries");
                 Console.WriteLine(mainSettings.Read("ChaosChat", "CHNSideEntries"));
-                ReadConfigFile();
+                useFunctions.ReadConfigFile();
                 Console.WriteLine("CHAOS;CHAT Saved and Config Reloaded!");
             }
         }

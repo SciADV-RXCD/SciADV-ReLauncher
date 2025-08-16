@@ -25,12 +25,16 @@ namespace SciADV_ReLauncher
         string VideoPlayerToolPath = "Tools\\VideoPlayer\\mpv.exe";
         string TextReaderToolPath = "Tools\\TextReader\\nw.exe";
 
+        Functions useFunctions = new Functions();
+
         private void FormMain_Load(object sender, EventArgs e)
         {
             DebugModeEnablerPart2ANDRandomQuotesTitle();
             RandomQuotesTitle();
 
-            ReadConfigFile();
+            //ReadConfigFile();
+
+            useFunctions.ReadConfigFile();
 
             if (File.Exists(LocaleEmulatorToolPath) == false)
             {
@@ -97,6 +101,7 @@ namespace SciADV_ReLauncher
 
 
 
+        /*
         public void ReadConfigFile()
         {
             if (File.Exists(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini"))
@@ -135,6 +140,7 @@ namespace SciADV_ReLauncher
                 mainSettings.Write("CHLoveChuChu", "NONE", "CHNSideEntries");
             }
         }
+        */
 
         public static string CHNmainGamePath;
         public static string SGmainGamePath;
