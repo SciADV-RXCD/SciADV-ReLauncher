@@ -16,5 +16,10 @@ namespace SciADV_ReLauncher.Forms
         {
             InitializeComponent();
         }
+
+        private void FormSGSideConfig_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

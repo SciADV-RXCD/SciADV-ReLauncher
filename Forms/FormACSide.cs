@@ -10,16 +10,19 @@ using System.Windows.Forms;
 
 namespace SciADV_ReLauncher.Forms
 {
-    public partial class FormRNESideConfig : Form
+    public partial class FormACSide : Form
     {
-        public FormRNESideConfig()
+        public FormACSide()
         {
             InitializeComponent();
         }
 
-        private void FormRNESideConfig_Load(object sender, EventArgs e)
+        private void FormACSide_Load(object sender, EventArgs e)
         {
 
         }
+
+        public static string ACGuideBookPath;
+        public static string MAGESFES2023HackersCrosstalkPath;
     }
 }

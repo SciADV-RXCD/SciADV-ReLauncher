@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace SciADV_ReLauncher.Forms
 {
-    public partial class FormRNESideConfig : Form
+    public partial class FormSG0SideConfig : Form
     {
-        public FormRNESideConfig()
+        public FormSG0SideConfig()
         {
             InitializeComponent();
         }
 
-        private void FormRNESideConfig_Load(object sender, EventArgs e)
+        private void FormSG0SideConfig_Load(object sender, EventArgs e)
         {
 
         }

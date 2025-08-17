@@ -1,6 +1,6 @@
 ﻿namespace SciADV_ReLauncher.Forms
 {
-    partial class FormRNESide
+    partial class FormACSide
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,16 @@
         {
             SuspendLayout();
             // 
-            // FormRNESide
+            // FormACSide
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Name = "FormRNESide";
+            Name = "FormACSide";
             ShowIcon = false;
-            Text = "FormRNESide";
-            Load += FormRNESide_Load;
+            Text = "FormACSide";
+            Load += FormACSide_Load;
             ResumeLayout(false);
         }
 

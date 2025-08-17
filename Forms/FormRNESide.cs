@@ -16,5 +16,18 @@ namespace SciADV_ReLauncher.Forms
         {
             InitializeComponent();
         }
+
+        private void FormRNESide_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public static string TheHomeOfOurDreamsPath;
+        public static string WinterSkyRocketPath;
+        public static string MapsTheRainAndMacaronsPath;
+        public static string TheUnpublishedMemoirsOfSenomiyaMisakiPath;
+        public static string TomorrowInTheBoxPath;
+        public static string MerryChristmalsPath;
+        public static string SGLinearBoundedPhenogramPath;
     }
 }

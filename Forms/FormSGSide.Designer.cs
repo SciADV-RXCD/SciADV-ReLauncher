@@ -35,7 +35,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormSGSide";
+            ShowIcon = false;
             Text = "FormSGSide";
             Load += FormSGSide_Load;
             ResumeLayout(false);

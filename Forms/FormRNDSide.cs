@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace SciADV_ReLauncher.Forms
 {
-    public partial class FormRNESideConfig : Form
+    public partial class FormRNDSide : Form
     {
-        public FormRNESideConfig()
+        public FormRNDSide()
         {
             InitializeComponent();
         }
 
-        private void FormRNESideConfig_Load(object sender, EventArgs e)
+        private void FormRNDSide_Load(object sender, EventArgs e)
         {
 
         }
+
+        public static string NextBatonPath;
     }
 }

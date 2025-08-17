@@ -49,6 +49,7 @@
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FormDebugMenu";
+            ShowIcon = false;
             Text = "FormDebugMenu";
             ResumeLayout(false);
         }

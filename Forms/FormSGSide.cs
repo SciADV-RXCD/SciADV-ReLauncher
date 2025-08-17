@@ -34,5 +34,6 @@ namespace SciADV_ReLauncher.Forms
         public static string RebellionOfTheMissingRingPath;
         public static string TheDistantValhallaPath;
         public static string BraunianMotionOfLoveAndHatePath;
+        public static string OkabeRintaroBirthdaySpecialPath;
     }
 }
