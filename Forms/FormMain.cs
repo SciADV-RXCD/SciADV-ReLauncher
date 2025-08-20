@@ -197,6 +197,8 @@ namespace SciADV_ReLauncher
         private void button4_Click(object sender, EventArgs e)
         {
             //STEINS;GATE Side Entries
+            FormSGSide formSGSide = new FormSGSide();
+            formSGSide.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)

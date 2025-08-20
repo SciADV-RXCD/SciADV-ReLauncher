@@ -24,7 +24,7 @@
 (R;NE) Frau: "Apologize! Y-You need to apologize to the 120 million lolicons nationwide!"
 (R;NE) Listen up. Boing refers to a woman's breasts. This'll be on the exam.
 (R;NE) Wait, we still have to pay?! That's not rock and roll at all!
-(R;NE) Subaru-kun, were you imagining the girls in skin-tight suits?#
+(R;NE) Subaru-kun, were you imagining the girls in skin-tight suits?
 (C;C) Serika: "Okkei!"
 (S;G0) Daru: "Whoops, got too serious. Need to slip back into shitpost mode."
 (A;C) It was like God was doing a little trolling.

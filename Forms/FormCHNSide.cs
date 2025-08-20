@@ -39,10 +39,29 @@ namespace SciADV_ReLauncher.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             //CHAOS;GATE
-            FormPDFViewer CHAOSGATEViewer = new FormPDFViewer();
-            FormPDFViewer.PDFfilepathFinal = ChaosGatePath;
-            CHAOSGATEViewer.Show();
+            if (!File.Exists(@$"{AppContext.BaseDirectory}\\Tools\\TextReader\\main.pdf"))
+            {
+                File.Copy(ChaosGatePath, @$"{AppContext.BaseDirectory}\\Tools\\TextReader\\main.pdf");
+            }
+            else
+            {
+                File.Delete(@$"{AppContext.BaseDirectory}\\Tools\\TextReader\\main.pdf");
+                File.Copy(ChaosGatePath, @$"{AppContext.BaseDirectory}\\Tools\\TextReader\\main.pdf");
+            }
+
+            Process ChaosGatePDF = new Process()
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = $@"{AppContext.BaseDirectory}\\Tools\\TextReader\\nw.exe",
+                    Arguments = "main.pdf",
+                    WorkingDirectory = @$"{AppContext.BaseDirectory}\\Tools\\TextReader",
+                }
+            };
+            ChaosGatePDF.Start();
+
             Console.WriteLine("\nCHAOS;GATE Launched!");
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -64,16 +83,35 @@ namespace SciADV_ReLauncher.Forms
             //Directory.SetCurrentDirectory($@"{CHLoveChuChuPath}");
             CHLoveChuChuGame.Start();
             Console.WriteLine("\nCHAOS;HEAD Love Chu☆Chu! Launched!");
-            this.WindowState = FormWindowState.Minimized;
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             //CHAOS;CHAT
-            FormPDFViewer CHAOSCHATViewer = new FormPDFViewer();
-            FormPDFViewer.PDFfilepathFinal = ChaosChatPath;
-            CHAOSCHATViewer.Show();
+            if (!File.Exists(@$"{AppContext.BaseDirectory}\\Tools\\TextReader\\main.pdf"))
+            {
+                File.Copy(ChaosChatPath, @$"{AppContext.BaseDirectory}\\Tools\\TextReader\\main.pdf");
+            }
+            else
+            {
+                File.Delete(@$"{AppContext.BaseDirectory}\\Tools\\TextReader\\main.pdf");
+                File.Copy(ChaosChatPath, @$"{AppContext.BaseDirectory}\\Tools\\TextReader\\main.pdf");
+            }
+
+            Process ChaosChatPDF = new Process()
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = $@"{AppContext.BaseDirectory}\\Tools\\TextReader\\nw.exe",
+                    Arguments = "main.pdf",
+                    WorkingDirectory = @$"{AppContext.BaseDirectory}\\Tools\\TextReader",
+                }
+            };
+            ChaosChatPDF.Start();
+
             Console.WriteLine("\nCHAOS;CHAT Launched!");
+            this.Close();
         }
     }
 }
