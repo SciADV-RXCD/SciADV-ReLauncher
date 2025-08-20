@@ -48,6 +48,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "FormDebugMenu";
             ShowIcon = false;
             Text = "FormDebugMenu";

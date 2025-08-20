@@ -38,7 +38,8 @@ namespace SciADV_ReLauncher
                 FormSGSide.AnAPosterioriExistencePath = mainSettings.Read("AnAPosterioriExistence", "SGSideEntries");
                 FormSGSide.SGVariantSpaceOctetPath = mainSettings.Read("SGVariantSpaceOctet", "SGSideEntries");
                 FormSGSide.SGMyDarlingsEmbracePath = mainSettings.Read("SGMyDarlingsEmbrace", "SGSideEntries");
-                FormSGSide.BabelOfTheGrievedMazePath = mainSettings.Read("BabelOfTheGrievedMaze", "SGSideEntries");
+                FormSGSide.BabelOfTheGrievedMazeMangaPath = mainSettings.Read("BabelOfTheGrievedMazeManga", "SGSideEntries");
+                FormSGSide.BabelOfTheGrievedMazeDramaCDPath = mainSettings.Read("BabelOfTheGrievedMazeDramaCD", "SGSideEntries");
                 FormSGSide.ArcLightOfThePointAtInfinityPath = mainSettings.Read("ArcLightOfThePointAtInfinity", "SGSideEntries");
                 FormSGSide.HydeOfTheDarkDimensionPath = mainSettings.Read("HydeOfTheDarkDimension", "SGSideEntries");
                 FormSGSide.RebellionOfTheMissingRingPath = mainSettings.Read("RebellionOfTheMissingRing", "SGSideEntries");
@@ -110,7 +111,8 @@ namespace SciADV_ReLauncher
                 mainSettings.Write("AnAPosterioriExistence", "NONE", "SGSideEntries");
                 mainSettings.Write("SGVariantSpaceOctet", "NONE", "SGSideEntries");
                 mainSettings.Write("SGMyDarlingsEmbrace", "NONE", "SGSideEntries");
-                mainSettings.Write("BabelOfTheGrievedMaze", "NONE", "SGSideEntries");
+                mainSettings.Write("BabelOfTheGrievedMazeManga", "NONE", "SGSideEntries");
+                mainSettings.Write("BabelOfTheGrievedMazeDramaCD", "NONE", "SGSideEntries");
                 mainSettings.Write("ArcLightOfThePointAtInfinity", "NONE", "SGSideEntries");
                 mainSettings.Write("HydeOfTheDarkDimension", "NONE", "SGSideEntries");
                 mainSettings.Write("RebellionOfTheMissingRing", "NONE", "SGSideEntries");

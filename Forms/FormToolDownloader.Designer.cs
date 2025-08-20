@@ -128,6 +128,7 @@
             Controls.Add(button2);
             Controls.Add(label2);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "FormToolDownloader";
             ShowIcon = false;
             Text = "Tool Downloader";

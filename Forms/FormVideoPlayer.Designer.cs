@@ -139,6 +139,7 @@
             Controls.Add(button1);
             Controls.Add(videoView1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "FormVideoPlayer";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;

@@ -135,6 +135,7 @@
             Controls.Add(textBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "FormCHNSideConfig";
             ShowIcon = false;
             Text = "CHAOS;HEAD - Side Entries Config";

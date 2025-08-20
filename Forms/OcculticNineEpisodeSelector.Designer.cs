@@ -192,6 +192,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "OcculticNineEpisodeSelector";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;

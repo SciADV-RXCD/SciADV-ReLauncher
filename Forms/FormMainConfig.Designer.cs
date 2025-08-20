@@ -300,6 +300,7 @@
             Controls.Add(label2);
             Controls.Add(textBox1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "FormMainConfig";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;

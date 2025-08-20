@@ -25,8 +25,8 @@ namespace SciADV_ReLauncher.Forms
         }
 
         public static string ChaosGatePath;
-        public static string ChaosChatPath;
         public static string CHLoveChuChuPath;
+        public static string ChaosChatPath;
 
         Functions useFunctions = new Functions();
 
@@ -78,10 +78,8 @@ namespace SciADV_ReLauncher.Forms
                     WorkingDirectory = CHLoveChuChuPath,
                 }
             };
-
-            //ReadConfigFile();
-            //Directory.SetCurrentDirectory($@"{CHLoveChuChuPath}");
             CHLoveChuChuGame.Start();
+
             Console.WriteLine("\nCHAOS;HEAD Love Chu☆Chu! Launched!");
             this.Close();
         }

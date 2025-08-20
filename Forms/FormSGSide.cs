@@ -22,18 +22,21 @@ namespace SciADV_ReLauncher.Forms
 
         }
 
-        public static string HolyDayOfTheCalamitousBirthPath;
-        public static string EgoisticPoriomaniaPath;
-        public static string LoadRegionOfDejaVuPath;
-        public static string AnAPosterioriExistencePath;
-        public static string SGVariantSpaceOctetPath;
-        public static string SGMyDarlingsEmbracePath;
-        public static string BabelOfTheGrievedMazePath;
-        public static string ArcLightOfThePointAtInfinityPath;
-        public static string HydeOfTheDarkDimensionPath;
-        public static string RebellionOfTheMissingRingPath;
-        public static string TheDistantValhallaPath;
-        public static string BraunianMotionOfLoveAndHatePath;
-        public static string OkabeRintaroBirthdaySpecialPath;
+        public static string HolyDayOfTheCalamitousBirthPath;       //Novella - PDF
+        public static string EgoisticPoriomaniaPath;                //Anime - MP4/MKV
+        public static string LoadRegionOfDejaVuPath;                //Anime - MP4/MKV
+        public static string AnAPosterioriExistencePath;            //Drama CD - MP4/MKV
+        public static string SGVariantSpaceOctetPath;               //Game - EXE
+        public static string SGMyDarlingsEmbracePath;               //Game - EXE
+        public static string BabelOfTheGrievedMazeMangaPath;        //Manga - PDF
+        public static string BabelOfTheGrievedMazeDramaCDPath;      //Drama CD - MP4/MKV
+        public static string ArcLightOfThePointAtInfinityPath;      //Drama CD - MP4/MKV
+        public static string HydeOfTheDarkDimensionPath;            //Drama CD - MP4/MKV
+        public static string RebellionOfTheMissingRingPath;         //Manga - PDF
+        public static string TheDistantValhallaPath;                //Novella - PDF
+        public static string BraunianMotionOfLoveAndHatePath;       //Manga - PDF
+        public static string OkabeRintaroBirthdaySpecialPath;       //Novella - PDF
+
+        //13 Buttons btw - Babel of Grieved Maze wird zsm zu einem button
     }
 }

@@ -121,6 +121,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "FormCHNSide";
             ShowIcon = false;
             Text = "CHAOS;HEAD - Side Entries";
