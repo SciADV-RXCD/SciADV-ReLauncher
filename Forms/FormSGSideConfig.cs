@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TinyINIController;
 
 namespace SciADV_ReLauncher.Forms
 {
@@ -19,7 +20,7 @@ namespace SciADV_ReLauncher.Forms
 
         private void FormSGSideConfig_Load(object sender, EventArgs e)
         {
-
+            IniFile mainSettings = new IniFile(@$"{AppContext.BaseDirectory}\\Config\\mainSettings.ini");
         }
     }
 }
